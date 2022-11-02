@@ -4,7 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="{{ URL::asset('css/style.css') }}" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" /
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+    <a href="https://www.flaticon.com/free-icons/email" title="email icons"></a>
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}" type="text/css">
     <title>Document</title>
 </head>
 <body>
@@ -34,6 +37,11 @@
                         <li class="nav-item">
                             <a href="#contact" class="nav-link"><i class="fa-solid fa-envelope"></i>Contact</a>
                         </li>
+                        @if (auth()->check())
+                            <li class="nav-item">
+                                <a href="/admin" class="nav-link"><i class="fa-solid fa-envelope"></i>admin panel</a>
+                            </li>
+                        @endif
                     </ul>
                     <div class="nav-close" id="nav-close">
                         <i class="fa-solid fa-x"></i>
@@ -43,7 +51,7 @@
                     <i class="fa-solid fa-bars"></i>
                 </div>
             </nav>
-            
+
         </div>
 </header>
 
@@ -54,12 +62,12 @@
             <section class="landing">
                 <div class="info">
                     <h1 class="home-titles">welcome to<br>my personal portfolio</h1>
-                    <h2 class="home-titles">I'm Amine Hariri</h2>
-                    <p class="home-titles">Junior web devloper</p>
-                    
+                    <h2 class="home-titles">I'm Mohamed Zaitoune</h2>
+                    <p class="home-titles"><b>Junior Back-End devloper</b></p>
+
                 </div>
                 <div class="image">
-                    <img src="IMAGES/LANDING.gif" alt="">
+                    <img src="zaaitoune.jpg" alt="" style="border-radius: 50%">
                 </div>
             </section>
             <div class="buttons">
@@ -71,12 +79,12 @@
                 </button>
                 <button class="aboutmebtn">
                     <a download href="CV-Aminehariri.pdf">
-                        <i class="fa-solid fa-file"></i>                
+                        <i class="fa-solid fa-file"></i>
                         download cv
                     </a>
                 </button>
             </div>
-            
+
             <button class="upbutton" name="upbutton">
                 <i class="fa-solid fa-up-long"></i>
             </button>
@@ -102,13 +110,17 @@
             <div class="container">
                 <h2 class="section-title" data-heading="My intro">About me</h2>
                 <div class="description">
-                    <p>I'am Amine Hariri,Junior web developer based in Casablanca,I'like coding things from scratch and enjoy bringing ideas to life in the browser with modern technologies.<br>I'm
-                        looking for a new opportunity on the job market,As an intern
-                        web developer. I build websites using : Html- Css-Tailwind - Javascript-ReactJs-Php-MySql</p>
+                    <p>
+                        I'am Amine Hariri,Junior web developer based in Casablanca,I'like coding things from scratch and enjoy bringing ideas to life in the browser with modern technologies.
+                        <br>
+                        I'm looking for a new opportunity on the job market,As an intern
+                        web developer. I build websites using : Laravel - Php - MySql - Html- Css- Tailwind - Javascript - Bootstrap
+                    </p>
                     <button class="aboutmebtn">
                         <a href="#contact">
                             <i class="fa-solid fa-code"></i>
-                            Hire me know</a></button>
+                            Hire me know</a>
+                    </button>
                 </div>
             </div>
 </div>
@@ -137,7 +149,7 @@
                             </div>
                             <i class="fa-solid fa-chevron-down skills-arrow"></i>
                         </div>
-                    </div> 
+                    </div>
 
                     <div class="skills-content">
                         <div class="skills-group skills-active" data-content id="frontend">
@@ -175,7 +187,7 @@
                                         <span class="skills-number">85%</span>
                                     </div>
                                     <div class="skills-bar">
-                                        <span class="skills-percsentage" style="width: 85%;"></span>
+                                        <span class="skills-percsentage" style="width: {20}%;"></span>
                                     </div>
                                 </div>
                                 <div class="skills-data">
@@ -211,7 +223,7 @@
                                 </div>
                                 <div class="skills-data">
                                     <div class="skills-titles">
-                                        <h3 class="skills-name">PYTHON</h3>
+                                        <h3 class="skills-name">Laravel</h3>
                                         <span class="skills-number">66%</span>
                                     </div>
                                     <div class="skills-bar">
@@ -222,7 +234,7 @@
                         </div>
                     </div>
                 </div>
-                
+
         </div>
 </div>
 
@@ -244,7 +256,7 @@
                             <p class="details-description">creation a website for the company MS-services (Employing Company) that the users can search for job and apply for the positions that suit them.<br>and easly the classement of the job request </p>
                             <ul class="detail-info">
                                 <li>TEchnologies - <span>Html Css Js </span></li>
-                                <li>Role - <span>Frontend</span></li> 
+                                <li>Role - <span>Frontend</span></li>
                                 <li>View - <span><a href="https://aminehariri.github.io/job-serch-sebsite/html/home.html">www.msservices.com</a></span></li>
                             </ul>
                         </div>
@@ -264,7 +276,7 @@
                             <p class="details-description">Creating an E-commerce website for BLUESTORES(Laptop shop).So they can controle their store products and post their products on the website to increase their sales.</p>
                             <ul class="detail-info">
                                 <li>TEchnologies - <span>Html Css Js </span></li>
-                                <li>Role - <span>Frontend</span></li> 
+                                <li>Role - <span>Frontend</span></li>
                                 <li>View - <span><a href="#">www.bluestore.com</a></span></li>
                             </ul>
                         </div>
@@ -283,10 +295,10 @@
                             <p class="details-description">I'm creating my own portfolio website from scratch to show my project and skills on internet ,Using html css javascript for frontend side .And for backend i'm using php and mysql as database to store the messages that are comming from the contact form . I'm almost done with the frontend side still some features to add then i'm gonna start the backend side .</p>
                             <ul class="detail-info">
                                 <li>TEchnologies - <span>Html Css Js Php Mysql</span></li>
-                                <li>Role - <span>Create from scratch</span></li> 
+                                <li>Role - <span>Create from scratch</span></li>
                                 <li>View - <span><a href="#">www.Aminehariri.ma</a></span></li>
                             </ul>
-                            
+
                         </div>
                     </div>
                 </div>
@@ -308,7 +320,7 @@
                                 <p class="details-description">Lorem ipsum dolor sit amet consectetur,dolor sit amet consectetur,dolor sit amet consectetur, dolor sit amet consectetur, adipisicing elit. Harum autem nostrum </p>
                                 <ul class="detail-info">
                                     <li>TEchnologies - <span>Html Css Js </span></li>
-                                    <li>Role - <span>Frontend</span></li> 
+                                    <li>Role - <span>Frontend</span></li>
                                     <li>View - <span><a href="#">www.domain.com</a></span></li>
                                 </ul>
                             </div>
@@ -350,31 +362,32 @@
             <div class="contact-left">
                 <h3>Send your message</h3>
                 <!-- method="POST" action="https://formspree.io/f/mknerbvg" -->
-                <form method="POST" action="https://formspree.io/f/mknerbvg">
+                <form method="POST" action="{{route('message.store')}}">
+                    @csrf
                     <div class="row">
                         <div class="group">
                             <label>Name</label>
-                            <input name="Name" type="text" class="name" maxlength="30" required placeholder="Your name">
+                            <input name="name" type="text" class="name" maxlength="30" required placeholder="Your name">
                             <label class="namevalid valide">Pleasse enter a valide name</label>
                         </div>
                         <div class="group">
                             <label>Phone</label>
-                            <input type="number" name="Phone" class="phone" required placeholder="Your number">
+                            <input type="text" name="phone" class="phone" required placeholder="Your number">
                         </div>
                     </div>
                     <div class="row">
                         <div class="group">
                             <label>Email</label>
-                            <input type="Email" id="email" name="Email" class="email" required placeholder="Example@gmail.com">
+                            <input type="Email" id="email" name="email" class="email" required placeholder="Example@gmail.com">
                             <label class="emailvalid valide">Please enter a valide email</label>
                         </div>
                         <div class="group">
                             <label>Object</label>
-                            <input type="text" name="Object"  maxlength="40" required placeholder="Subject">
+                            <input type="text" name="object"  maxlength="40" required placeholder="Subject">
                         </div>
                     </div>
                     <label >Message</label>
-                    <textarea placeholder="Your message" name="Message" class="message" required rows="5"></textarea>
+                    <textarea placeholder="Your message" name="content" class="message" required rows="5"></textarea>
                     <label class="msgvalid valide">Please enter a valide email</label>
                     <button class="sendbtn"  type="submit">send</button>
                 </form>
@@ -408,7 +421,7 @@
             </div>
             <div class="col">
                 <h2>Quick links</h2>
-                <div class="lists"> 
+                <div class="lists">
                 <ul>
                     <li><a href="#home">Home</a></li>
                     <li><a href="#about">About</a></li>
@@ -443,3 +456,7 @@
 <script src="JS/main.js"></script>
 </body>
 </html>
+
+
+
+
