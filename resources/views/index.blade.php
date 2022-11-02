@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" /
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
     <a href="https://www.flaticon.com/free-icons/email" title="email icons"></a>
     <link rel="stylesheet" href="{{ asset('css/style.css') }}" type="text/css">
     <title>Document</title>
@@ -63,7 +63,7 @@
                 <div class="info">
                     <h1 class="home-titles">welcome to<br>my personal portfolio</h1>
                     <h2 class="home-titles">I'm Mohamed Zaitoune</h2>
-                    <p class="home-titles"><b>Junior Back-End devloper</b></p>
+                    <p class="home-titles"><b>{{$parametre->role}}</b></p>
 
                 </div>
                 <div class="image">
@@ -111,10 +111,9 @@
                 <h2 class="section-title" data-heading="My intro">About me</h2>
                 <div class="description">
                     <p>
-                        I'am Amine Hariri,Junior web developer based in Casablanca,I'like coding things from scratch and enjoy bringing ideas to life in the browser with modern technologies.
+                        {{$parametre->about_1}}.
                         <br>
-                        I'm looking for a new opportunity on the job market,As an intern
-                        web developer. I build websites using : Laravel - Php - MySql - Html- Css- Tailwind - Javascript - Bootstrap
+                        {{$parametre->about_2}}.
                     </p>
                     <button class="aboutmebtn">
                         <a href="#contact">
@@ -396,13 +395,13 @@
                 <h3>Find me here</h3>
                     <div class="ccontainer">
                         <div class="box">
-                            <h4>Aminehariri57@gmail.com</h4>
+                            <h4>{{$parametre->gmail}}</h4>
                         </div>
                         <div class="box">
-                            <h4>Www.gethub/aminehariri</h4>
+                            <h4><a style="color: black" href="{{$parametre->linkedIn_link}}">{{$parametre->linkedIn_link}}</a></h4>
                         </div>
                         <div class="box">
-                            <h4>www.linkedin/aminehariri</h4>
+                            <h4><a style="color: black" href="{{$parametre->github_link}}" target="blank">{{$parametre->github_link}}</a></h4>
                         </div>
                         <p>If you have any suggestion, project or even you want to say Hello.<br> Please,fill the out form and i will reply you shortly</p>
                     </div>

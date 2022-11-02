@@ -310,7 +310,7 @@ return [
         ],
         [
             'text' => 'add new admin',
-            'url'  => 'admin\manage\create',
+            'url'  => 'admin\settings\create',
             'icon' => 'fas fa-fw fa-user',
         ],
         [
@@ -320,111 +320,39 @@ return [
         ],
 
         [
-            'text'    => 'Admin liste',
+            'text'    => 'parameters',
             'icon'    => 'fas fa-fw fa-arrow-alt-circle-right',
             'submenu' => [
                 [
-                    'text' => 'liste of Admins',
+                    'text' => 'nav bar logo',
                     'url'  => 'admin\manage',
                     'icon'    => 'fas fa-fw fa-list',
                 ],
                 [
-                    'text' => 'Create',
-                    'url'  => 'admin\manage\create',
-                    'icon'    => 'fas fa-fw fa-user-plus',
-                ],
-            ],
-        ],
-        [
-            'text'    => 'livreurs liste',
-            'icon'    => 'fas fa-fw fa-arrow-alt-circle-right',
-            'submenu' => [
-                [
-                    'text' => 'list of livreurs',
-                    'url'  => 'admin\manage_livreurs',
+                    'text' => 'role',
+                    'url'  => 'admin/update_role',
                     'icon'    => 'fas fa-fw fa-list',
                 ],
                 [
-                    'text' => 'Create',
-                    'url'  => 'admin\manage_livreurs\create',
-                    'icon'    => 'fas fa-fw fa-user-plus',
-                ],
-            ],
-        ],
-
-        [
-            'text'    => 'Categories',
-            'icon'    => 'fas fa-fw fa-arrow-alt-circle-right',
-            'submenu' => [
-                [
-                    'text' => 'liste of categories',
-                    'url'  => 'admin\categorie',
+                    'text' => 'links',
+                    'url'  => 'admin\update_links',
                     'icon'    => 'fas fa-fw fa-list',
                 ],
                 [
-                    'text' => 'Create',
-                    'url'  => 'admin\categorie\create',
-                    'icon'    => 'fas fa-fw fa-user-plus',
-                ],
-            ],
-        ],
-        [
-            'text'    => 'Food',
-            'icon'    => 'fas fa-fw fa-arrow-alt-circle-right',
-            'submenu' => [
-                [
-                    'text' => 'liste of foods',
-                    'url'  => 'admin\food',
+                    'text' => 'about',
+                    'url'  => 'admin\update_about',
                     'icon'    => 'fas fa-fw fa-list',
                 ],
                 [
-                    'text' => 'Create',
-                    'url'  => 'admin\food\create',
-                    'icon'    => 'fas fa-fw fa-user-plus',
-                ],
-            ],
-        ],
-        [
-            'text'    => 'orders',
-            'icon'    => 'fas fa-fw fa-arrow-alt-circle-right',
-            'submenu' => [
-                [
-                    'text' => 'all orders',
-                    'url'  => 'admin\manage_order',
+                    'text' => 'cv',
+                    'url'  => 'admin\manage',
                     'icon'    => 'fas fa-fw fa-list',
                 ],
                 [
-                    'text' => 'untacked orders',
-                    'url'  => 'admin\manage_order/create',
+                    'text' => 'picture',
+                    'url'  => 'admin\manage',
                     'icon'    => 'fas fa-fw fa-list',
                 ],
-                [
-                    'text' => 'taked orders',
-                    'url'  => 'admin\tacked_orders',
-                    'icon'    => 'fas fa-fw fa-list',
-                ],
-                [
-                    'text' => 'returned orders',
-                    'url'  => 'admin\returned_orders',
-                    'icon'    => 'fas fa-fw fa-list',
-                ],
-            ],
-        ],
-        [
-            'text'    => 'messages',
-            'icon'    => 'fa fa-envelope',
-            'submenu' => [
-                [
-                    'text' => 'unreaded messages',
-                    'url'  => 'admin\unreaded_messages',
-                    'icon'    => 'fas fa-fw fa-list',
-                    'label'=> 4,
-                ],
-                [
-                    'text' => 'readed messages',
-                    'url'  => 'admin\readed_messages',
-                    'icon'    => 'fas fa-fw fa-list',
-                ]
             ],
         ],
     ],
