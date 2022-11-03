@@ -57,18 +57,25 @@ class parametersController extends Controller
     }
 
     public function set_picture(){
-        $about=setting::find(1);
-        return view('admin.parameters.about',compact('about'));
+        $picture=setting::find(1);
+        return view('admin.parameters.picture',compact('picture'));
     }
 
-    public function picture(Request $request ){
+    public function picture(Request $request){
+        // dd($request->all());
         $parameter=setting::find(1);
+        if ($request->has('image')) {
+            $file = $request->image;
+            $image_name = time() . '_' . $file->getClientOriginalName();
+            $file->move(public_path('profile'),$image_name);
+            unlink(public_path('/profile').'/'.$parameter->picture);
+            $parameter->picture=$image_name;
+        }
         $parameter->update([
-            "about_1" => $request->about_1,
-            "about_2" => $request->about_2,
+            'picture'=>$image_name
         ]);
         return redirect()->route('admin.home')->with([
-            "success" => "about sections est bien modifier , go check"
+            "success" => "picture est bien modifier "
         ]);
     }
 }

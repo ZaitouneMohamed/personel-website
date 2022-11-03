@@ -344,12 +344,12 @@ return [
                     'icon'    => 'fas fa-fw fa-list',
                 ],
                 [
-                    'text' => 'cv',
-                    'url'  => 'admin\manage',
+                    'text' => 'picture',
+                    'url'  => 'admin\update_picture',
                     'icon'    => 'fas fa-fw fa-list',
                 ],
                 [
-                    'text' => 'picture',
+                    'text' => 'cv',
                     'url'  => 'admin\manage',
                     'icon'    => 'fas fa-fw fa-list',
                 ],

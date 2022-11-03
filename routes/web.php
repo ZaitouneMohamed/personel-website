@@ -39,4 +39,7 @@ Route::prefix('admin')->middleware(['IsAdmin'])->group(function(){
     // update about sections
     Route::get('update_about',[parametersController::class,'set_about'])->name('about.set');
     Route::put('about',[parametersController::class,'about'])->name('about.update');
+    // update picture sections
+    Route::get('update_picture',[parametersController::class,'set_picture'])->name('picture.set');
+    Route::put('picture',[parametersController::class,'picture'])->name('picture.update');
 });

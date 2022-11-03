@@ -67,7 +67,7 @@
 
                 </div>
                 <div class="image">
-                    <img src="zaaitoune.jpg" alt="" style="border-radius: 50%">
+                    <img src="profile/{{$parametre->picture}}" alt="" style="border-radius: 50%">
                 </div>
             </section>
             <div class="buttons">
