@@ -3,7 +3,9 @@
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\skillsControlller;
 use App\Http\Controllers\messagesController;
+use App\Http\Controllers\servicesControlller;
 use App\Http\Controllers\admin\projectController;
 use App\Http\Controllers\admin\parametersController;
 use App\Http\Controllers\admin\manageadminController;
@@ -50,5 +52,9 @@ Route::prefix('admin')->middleware(['IsAdmin'])->group(function(){
     Route::get('update_cv',[parametersController::class,'set_cv'])->name('cv.set');
     Route::put('cv',[parametersController::class,'cv'])->name('cv.update');
     // project sections
-    Route::resource('/projects', projectController::class);
+    Route::resource('projects', projectController::class);
+    // skills sections
+    Route::resource('skills', skillsControlller::class);
+    // services sections
+    Route::resource('services', servicesControlller::class);
 });

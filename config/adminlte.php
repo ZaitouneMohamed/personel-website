@@ -360,6 +360,16 @@ return [
             'url'  => 'admin/projects',
             'icon' => 'fas fa-fw fa-user',
         ],
+        [
+            'text' => 'skills',
+            'url'  => 'admin/skills',
+            'icon' => 'fas fa-fw fa-user',
+        ],
+        [
+            'text' => 'services',
+            'url'  => 'admin/services',
+            'icon' => 'fas fa-fw fa-user',
+        ],
     ],
 
     /*

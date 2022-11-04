@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class setting extends Model
 {
     use HasFactory;
+    
     protected $fillable = [
         'nav_logo',
         'role',
@@ -19,13 +20,5 @@ class setting extends Model
         'github_link',
         'linkedIn_link'
     ];
-//     navbar logo
-// role "Junior Back-End devloper or somethings else"
-// cv
-// picture
-// about mee 1
-// about mee 2
-// gmail
-// github_link
-// linkedIn_link
+
 }
