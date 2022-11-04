@@ -319,6 +319,7 @@ return [
             'icon' => 'fas fa-fw fa-user',
         ],
 
+
         [
             'text'    => 'parameters',
             'icon'    => 'fas fa-fw fa-arrow-alt-circle-right',
@@ -351,6 +352,22 @@ return [
                 [
                     'text' => 'cv',
                     'url'  => 'admin\update_cv',
+                    'icon'    => 'fas fa-fw fa-list',
+                ],
+            ],
+        ],
+        [
+            'text'    => 'messages',
+            'icon'    => 'fas fa-fw fa-arrow-alt-circle-right',
+            'submenu' => [
+                [
+                    'text' => 'unreaded',
+                    'url'  => 'admin\unreaded',
+                    'icon'    => 'fas fa-fw fa-list',
+                ],
+                [
+                    'text' => 'readed',
+                    'url'  => 'admin\readed',
                     'icon'    => 'fas fa-fw fa-list',
                 ],
             ],

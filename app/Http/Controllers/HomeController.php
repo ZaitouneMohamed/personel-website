@@ -2,6 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\skill;
+use App\Models\project;
+use App\Models\service;
 use App\Models\setting;
 use Illuminate\Http\Request;
 
@@ -25,6 +28,10 @@ class HomeController extends Controller
     public function index()
     {
         $parametre=setting::find(1);
-        return view('index',compact('parametre'));
+        $fr_skills=skill::all()->where('type','Front-End');
+        $bc_skills=skill::all()->where('type','Back-End');
+        $projects=project::all();
+        $services=service::all();
+        return view('index',compact('parametre','fr_skills','bc_skills','projects','services'));
     }
 }

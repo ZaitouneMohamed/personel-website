@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\message;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class messagesController extends Controller
 {
@@ -14,7 +15,17 @@ class messagesController extends Controller
      */
     public function index()
     {
-        //
+        
+    }
+
+    public function readed(){
+        $readed_messages=DB::table('messages')->where('statue',1)->orderBy("created_at","desc")->paginate(6);
+        return view('admin.messages.readed',compact("readed_messages"));
+    }
+
+    public function unreaded(){
+        $unreaded_messages=DB::table('messages')->where('statue',0)->orderBy("created_at","desc")->paginate(6);
+        return view('admin.messages.unreaded',compact("unreaded_messages"));
     }
 
     /**
@@ -24,7 +35,7 @@ class messagesController extends Controller
      */
     public function create()
     {
-        //
+
     }
 
     /**
@@ -35,12 +46,10 @@ class messagesController extends Controller
      */
     public function store(Request $request)
     {
-        // dd($request->all());
         message::create([
             "name" => $request->name,
             "phone" => $request->phone,
             "email" => $request->email,
-            "object" => $request->object,
             "content" => $request->content,
             "statue" => 0
         ]);
@@ -55,7 +64,11 @@ class messagesController extends Controller
      */
     public function show($id)
     {
-        //
+        $message=message::find($id);
+        $message->update([
+            "statue" => 1
+        ]);
+        return view('admin.messages.message',compact('message'));
     }
 
     /**

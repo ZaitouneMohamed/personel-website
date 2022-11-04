@@ -57,4 +57,8 @@ Route::prefix('admin')->middleware(['IsAdmin'])->group(function(){
     Route::resource('skills', skillsControlller::class);
     // services sections
     Route::resource('services', servicesControlller::class);
+    // readed an unreaded messages
+    Route::get('readed',[messagesController::class,'readed'])->name('messages.readed');
+    Route::get('unreaded',[messagesController::class,'unreaded'])->name('messages.unreaded');
+
 });

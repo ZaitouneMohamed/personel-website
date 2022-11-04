@@ -15,7 +15,6 @@
         <div class="container">
             <nav class="nav">
                 <a href="#">
-                    {{-- <img src="IMAGES/LOGO.png" alt=""> --}}
                     <img src="profile/{{$parametre->nav_logo}}" alt="">
                 </a>
                 <div class="nav-menu" id="nav-menu">
@@ -65,7 +64,6 @@
                     <h1 class="home-titles">welcome to<br>my personal portfolio</h1>
                     <h2 class="home-titles">I'm Mohamed Zaitoune</h2>
                     <p class="home-titles"><b>{{$parametre->role}}</b></p>
-
                 </div>
                 <div class="image">
                     <img src="profile/{{$parametre->picture}}" alt="" style="border-radius: 50%">
@@ -94,13 +92,13 @@
         <div class="container">
         <div class="social">
             <div class="box">
-                <a href="mailto:Aminehariri57@gmail.com"><img src="IMAGES/email (2).png" alt=""></a>
+                <a href="{{$parametre->gmail}}"><img src="IMAGES/email (2).png" alt=""></a>
             </div>
             <div class="box">
-                <a href="https://github.com/Aminehariri"><img src="IMAGES/github.png" alt=""></a>
+                <a href="{{$parametre->github_link}}" target="_blank"><img src="IMAGES/github.png" alt=""></a>
             </div>
             <div class="box">
-                <a href="https://www.linkedin.com/in/amine-hariri-966485235/"><img src="IMAGES/linkedin.png" alt=""></a>
+                <a href="{{$parametre->linkedIn_link}}" target="_blank"><img src="IMAGES/linkedin.png" alt=""></a>
             </div>
         </div>
         </div>
@@ -138,7 +136,7 @@
                             <i class="fa-solid fa-code skills-icon"></i>
                             <div>
                                 <h1 class="skills-title">Frontend devloper</h1>
-                                <span class="skills-subtitle">More than 2years</span>
+                                <span class="skills-subtitle">More than a year</span>
                             </div>
                             <i class="fa-solid fa-chevron-down skills-arrow"></i>
                         </div>
@@ -146,7 +144,7 @@
                             <i class="fa-sharp fa-solid fa-database skills-icon"></i>
                             <div>
                                 <h1 class="skills-title">Backend devloper</h1>
-                                <span class="skills-subtitle">more than a year </span>
+                                <span class="skills-subtitle">more than 2 year </span>
                             </div>
                             <i class="fa-solid fa-chevron-down skills-arrow"></i>
                         </div>
@@ -155,87 +153,36 @@
                     <div class="skills-content">
                         <div class="skills-group skills-active" data-content id="frontend">
                             <div class="skills-list ">
-                                <div class="skills-data">
-                                    <div class="skills-titles">
-                                        <h3 class="skills-name">HTML</h3>
-                                        <span class="skills-number">88%</span>
+                                @foreach ($fr_skills as $skill )
+                                    <div class="skills-data">
+                                        <div class="skills-titles">
+                                            <h3 class="skills-name">{{$skill->name}}</h3>
+                                            <span class="skills-number">{{$skill->prct}}%</span>
+                                        </div>
+                                        <div class="skills-bar">
+                                            <span class="skills-percsentage" style="width:{{$skill->prct}}%;"></span>
+                                        </div>
                                     </div>
-                                    <div class="skills-bar">
-                                        <span class="skills-percsentage" style="width:88%;"></span>
-                                    </div>
-                                </div>
-                                <div class="skills-data">
-                                    <div class="skills-titles">
-                                        <h3 class="skills-name">CSS</h3>
-                                        <span class="skills-number">80%</span>
-                                    </div>
-                                    <div class="skills-bar">
-                                        <span class="skills-percsentage" style="width: 80%;"></span>
-                                    </div>
-                                </div>
-                                <div class="skills-data">
-                                    <div class="skills-titles">
-                                        <h3 class="skills-name">TAILWIND</h3>
-                                        <span class="skills-number">75%</span>
-                                    </div>
-                                    <div class="skills-bar">
-                                        <span class="skills-percsentage" style="width: 75%;"></span>
-                                    </div>
-                                </div>
-                                <div class="skills-data">
-                                    <div class="skills-titles">
-                                        <h3 class="skills-name">BOOTSTRAP</h3>
-                                        <span class="skills-number">85%</span>
-                                    </div>
-                                    <div class="skills-bar">
-                                        <span class="skills-percsentage" style="width: {20}%;"></span>
-                                    </div>
-                                </div>
-                                <div class="skills-data">
-                                    <div class="skills-titles">
-                                        <h3 class="skills-name">JAVASCRIPT</h3>
-                                        <span class="skills-number">80%</span>
-                                    </div>
-                                    <div class="skills-bar">
-                                        <span class="skills-percsentage" style="width: 80%;"></span>
-                                    </div>
-                                </div>
+                                @endforeach
                             </div>
                         </div>
                         <div class="skills-group" data-content id="backend">
                             <div class="skills-list">
-                                <div class="skills-data">
-                                    <div class="skills-titles">
-                                        <h3 class="skills-name">PHP</h3>
-                                        <span class="skills-number">50%</span>
+                                @foreach ($bc_skills as $skill )
+                                    <div class="skills-data">
+                                        <div class="skills-titles">
+                                            <h3 class="skills-name">{{$skill->name}}</h3>
+                                            <span class="skills-number">{{$skill->prct}}%</span>
+                                        </div>
+                                        <div class="skills-bar">
+                                            <span class="skills-percsentage" style="width:{{$skill->prct}}%;"></span>
+                                        </div>
                                     </div>
-                                    <div class="skills-bar">
-                                        <span class="skills-percsentage" style="width: 50%;"></span>
-                                    </div>
-                                </div>
-                                <div class="skills-data">
-                                    <div class="skills-titles">
-                                        <h3 class="skills-name">MYSQL</h3>
-                                        <span class="skills-number">80%</span>
-                                    </div>
-                                    <div class="skills-bar">
-                                        <span class="skills-percsentage" style="width: 80%;"></span>
-                                    </div>
-                                </div>
-                                <div class="skills-data">
-                                    <div class="skills-titles">
-                                        <h3 class="skills-name">Laravel</h3>
-                                        <span class="skills-number">66%</span>
-                                    </div>
-                                    <div class="skills-bar">
-                                        <span class="skills-percsentage" style="width: 66%;"></span>
-                                    </div>
-                                </div>
+                                @endforeach
                             </div>
                         </div>
                     </div>
                 </div>
-
         </div>
 </div>
 
@@ -245,64 +192,26 @@
     <h2 class="section-title" data-heading="My abilities">My PROJECTS</h2>
         <div class="container">
             <div class="projects">
-                <div class="project ms-service ">
-                    <img src="IMAGES/MS-IMAGES/download.png" class="p-img"  alt="">
-                    <h3>job search website</h3>
-                    <span class="work-button">more
-                        <i class="fa-sharp fa-solid fa-arrow-right"></i>
-                    </span>
-                    <div class="popup-info">
-                        <div class="portfolio-popup-body">
-                            <h3 class="details-title">Job serch website</h3>
-                            <p class="details-description">creation a website for the company MS-services (Employing Company) that the users can search for job and apply for the positions that suit them.<br>and easly the classement of the job request </p>
-                            <ul class="detail-info">
-                                <li>TEchnologies - <span>Html Css Js </span></li>
-                                <li>Role - <span>Frontend</span></li>
-                                <li>View - <span><a href="https://aminehariri.github.io/job-serch-sebsite/html/home.html">www.msservices.com</a></span></li>
-                            </ul>
+                @foreach ($projects as $project)       
+                    <div class="project ms-service ">
+                        <img src="/projects/{{$project->picture}}" class="p-img"  alt="">
+                        <h3>{{$project->name}}</h3>
+                        <span class="work-button">more
+                            <i class="fa-sharp fa-solid fa-arrow-right"></i>
+                        </span>
+                        <div class="popup-info">
+                            <div class="portfolio-popup-body">
+                                <h3 class="details-title">{{$project->name}}</h3>
+                                <p class="details-description">{{$project->description}} </p>
+                                <ul class="detail-info">
+                                    <li>TEchnologies - <span>{{$project->technologies}}. </span></li>
+                                    <li>Role - <span>Back-End</span></li>
+                                    <li>View - <span><a href="{{$project->link}}">{{$project->link}}</a></span></li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
-                </div>
-
-                <div class="project bluestore">
-
-                    <img src="IMAGES/MS-IMAGES/BLUESTORE.png" class="p-img" alt="">
-                    <h3>E-commerce website</h3>
-                    <span class="work-button">more
-                        <i class="fa-sharp fa-solid fa-arrow-right"></i>
-                    </span>
-                    <div class="popup-info">
-                        <div class="portfolio-popup-body">
-                            <h3 class="details-title">E-commerce website</h3>
-                            <p class="details-description">Creating an E-commerce website for BLUESTORES(Laptop shop).So they can controle their store products and post their products on the website to increase their sales.</p>
-                            <ul class="detail-info">
-                                <li>TEchnologies - <span>Html Css Js </span></li>
-                                <li>Role - <span>Frontend</span></li>
-                                <li>View - <span><a href="#">www.bluestore.com</a></span></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project portfolio">
-                    <img src="IMAGES/MS-IMAGES/PORTFOLIO.png" class="p-img"  alt="">
-                    <h3>portfolio website</h3>
-                    <span class="work-button">more
-                        <i class="fa-sharp fa-solid fa-arrow-right"></i>
-                    </span>
-                    <div class="popup-info">
-                        <div class="portfolio-popup-body">
-                            <h3 class="details-title">Portfolio website</h3>
-                            <p class="details-description">I'm creating my own portfolio website from scratch to show my project and skills on internet ,Using html css javascript for frontend side .And for backend i'm using php and mysql as database to store the messages that are comming from the contact form . I'm almost done with the frontend side still some features to add then i'm gonna start the backend side .</p>
-                            <ul class="detail-info">
-                                <li>TEchnologies - <span>Html Css Js Php Mysql</span></li>
-                                <li>Role - <span>Create from scratch</span></li>
-                                <li>View - <span><a href="#">www.Aminehariri.ma</a></span></li>
-                            </ul>
-
-                        </div>
-                    </div>
-                </div>
+                @endforeach
             </div>
 
             <!-- pop up code -->
@@ -338,18 +247,28 @@
     <div class="container">
         <h2 class="section-title" data-heading="My services">what can i do </h2>
         <div class="boxes">
-            <div class="box">
+            @foreach ($services as $service)    
+                <div class="box">
+                    <i class="{{$service->icon}}"></i>
+                    {{--  --}}
+                    <h3 class="infoh3">{{$service->name}}</h3>
+                    <p class="infop">{{$service->description}}</p>
+                </div>
+            @endforeach
+            {{-- <div class="box">
                 <i class="fa-solid fa-code infoi"></i>
                 <h3 class="infoh3">frontend development</h3>
                 <p class="infop">Code the user experience.
                     Using HTML, CSS JAVASCRIPT and some Frameworks to bring concepts to life.
                     Implementing the design on mobile first.</p>
-            </div>
-            <div class="box right">
+            </div> --}}
+            {{-- <div class="box right">
                 <i class="fa-solid fa-server infoi"></i>
                 <h3 class="infoh3">Backend development</h3>
-                <p class="infop">develope all server-side logic.managing the interchange of data between the server and the users. </p>
-            </div>
+                <p class="infop">
+                    develope all server-side logic.managing the interchange of data between the server and the users.
+                </p>
+            </div> --}}
         </div>
     </div>
 </div>
@@ -362,7 +281,6 @@
         <div class="contact-box">
             <div class="contact-left">
                 <h3>Send your message</h3>
-                <!-- method="POST" action="https://formspree.io/f/mknerbvg" -->
                 <form method="POST" action="{{route('message.store')}}">
                     @csrf
                     <div class="row">
@@ -382,14 +300,10 @@
                             <input type="Email" id="email" name="email" class="email" required placeholder="Example@gmail.com">
                             <label class="emailvalid valide">Please enter a valide email</label>
                         </div>
-                        <div class="group">
-                            <label>Object</label>
-                            <input type="text" name="object"  maxlength="40" required placeholder="Subject">
-                        </div>
                     </div>
                     <label >Message</label>
-                    <textarea placeholder="Your message" name="content" class="message" required rows="5"></textarea>
-                    <label class="msgvalid valide">Please enter a valide email</label>
+                        <textarea placeholder="Your message" name="content" class="message" required rows="5"></textarea>
+                        <label class="msgvalid valide">Please enter a valide email</label>
                     <button class="sendbtn"  type="submit">send</button>
                 </form>
             </div>
@@ -423,32 +337,32 @@
             <div class="col">
                 <h2>Quick links</h2>
                 <div class="lists">
-                <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                </ul>
-                <ul>
-                    <li><a href="#work">Work</a></li>
-                    <li><a href="#service">Services</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#skills">Skills</a></li>
+                    </ul>
+                    <ul>
+                        <li><a href="#work">Work</a></li>
+                        <li><a href="#service">Services</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
                 </div>
             </div>
             <div class="col fsocial">
                 <div>
-                    <a href="https://github.com/Aminehariri"><i class="fa-brands fa-github"></i></a>
+                    <a href="{{$parametre->github_link}}" target="_blank"><i class="fa-brands fa-github"></i></a>
                 </div>
                 <div>
-                    <a href="https://www.linkedin.com/in/amine-hariri-966485235/"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="{{$parametre->linkedin_link}}" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
                 </div>
                 <div>
-                    <a href="mailto:Aminehariri57@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+                    <a href="mailto:{{$parametre->gmail}}" ><i class="fa-solid fa-envelope"></i></a>
                 </div>
             </div>
         </div>
         <div class="copy">
-            <p>&copy; <span class="year"></span> AMINE HARIRI | All Rights Reserved</p>
+            <p>&copy; <span class="year"></span> Mohamed Zaitoune | All Rights Reserved</p>
         </div>
     </div>
 </div>
