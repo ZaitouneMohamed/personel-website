@@ -325,7 +325,7 @@ return [
             'submenu' => [
                 [
                     'text' => 'nav bar logo',
-                    'url'  => 'admin\manage',
+                    'url'  => 'admin\update_navlogo',
                     'icon'    => 'fas fa-fw fa-list',
                 ],
                 [
@@ -350,10 +350,15 @@ return [
                 ],
                 [
                     'text' => 'cv',
-                    'url'  => 'admin\manage',
+                    'url'  => 'admin\update_cv',
                     'icon'    => 'fas fa-fw fa-list',
                 ],
             ],
+        ],
+        [
+            'text' => 'projects',
+            'url'  => 'admin/projects',
+            'icon' => 'fas fa-fw fa-user',
         ],
     ],
 

@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\messagesController;
+use App\Http\Controllers\admin\projectController;
 use App\Http\Controllers\admin\parametersController;
 use App\Http\Controllers\admin\manageadminController;
 
@@ -39,7 +40,15 @@ Route::prefix('admin')->middleware(['IsAdmin'])->group(function(){
     // update about sections
     Route::get('update_about',[parametersController::class,'set_about'])->name('about.set');
     Route::put('about',[parametersController::class,'about'])->name('about.update');
-    // update picture sections
+    // update picture
     Route::get('update_picture',[parametersController::class,'set_picture'])->name('picture.set');
     Route::put('picture',[parametersController::class,'picture'])->name('picture.update');
+    // update navbar logo
+    Route::get('update_navlogo',[parametersController::class,'set_navlogo'])->name('navlogo.set');
+    Route::put('navlogo',[parametersController::class,'navlogo'])->name('navlogo.update');
+    // update cv
+    Route::get('update_cv',[parametersController::class,'set_cv'])->name('cv.set');
+    Route::put('cv',[parametersController::class,'cv'])->name('cv.update');
+    // project sections
+    Route::resource('/projects', projectController::class);
 });

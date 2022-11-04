@@ -15,7 +15,8 @@
         <div class="container">
             <nav class="nav">
                 <a href="#">
-                    <img src="IMAGES/LOGO.png" alt="">
+                    {{-- <img src="IMAGES/LOGO.png" alt=""> --}}
+                    <img src="profile/{{$parametre->nav_logo}}" alt="">
                 </a>
                 <div class="nav-menu" id="nav-menu">
                     <ul class="nav-list">
@@ -78,7 +79,8 @@
                     </a>
                 </button>
                 <button class="aboutmebtn">
-                    <a download href="CV-Aminehariri.pdf">
+                    {{-- <a download href="CV-Aminehariri.pdf"> --}}
+                    <a target="blank" href="profile/{{$parametre->cv}}">
                         <i class="fa-solid fa-file"></i>
                         download cv
                     </a>

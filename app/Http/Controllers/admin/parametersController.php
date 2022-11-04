@@ -62,7 +62,6 @@ class parametersController extends Controller
     }
 
     public function picture(Request $request){
-        // dd($request->all());
         $parameter=setting::find(1);
         if ($request->has('image')) {
             $file = $request->image;
@@ -73,6 +72,47 @@ class parametersController extends Controller
         }
         $parameter->update([
             'picture'=>$image_name
+        ]);
+        return redirect()->route('admin.home')->with([
+            "success" => "picture est bien modifier "
+        ]);
+    }
+
+    public function set_navlogo(){
+        $picture=setting::find(1);
+        return view('admin.parameters.navlogo',compact('picture'));
+    }
+
+    public function navlogo(Request $request){
+        $parameter=setting::find(1);
+        if ($request->has('image')) {
+            $file = $request->image;
+            $image_name = time() . '_' . $file->getClientOriginalName();
+            $file->move(public_path('profile'),$image_name);
+            unlink(public_path('/profile').'/'.$parameter->nav_logo);
+        }
+        $parameter->update([
+            'nav_logo'=>$image_name
+        ]);
+        return redirect()->route('admin.home')->with([
+            "success" => "picture est bien modifier "
+        ]);
+    }
+    public function set_cv(){
+        $cv=setting::find(1);
+        return view('admin.parameters.cv',compact('cv'));
+    }
+
+    public function cv(Request $request){
+        $parameter=setting::find(1);
+        if ($request->has('cv')) {
+            $file = $request->cv;
+            $cv_name = time() . '_' . $file->getClientOriginalName();
+            $file->move(public_path('profile'),$cv_name);
+            unlink(public_path('/profile').'/'.$parameter->cv);
+        }
+        $parameter->update([
+            'cv'=>$cv_name
         ]);
         return redirect()->route('admin.home')->with([
             "success" => "picture est bien modifier "
