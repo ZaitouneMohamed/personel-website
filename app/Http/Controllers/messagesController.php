@@ -15,11 +15,11 @@ class messagesController extends Controller
      */
     public function index()
     {
-        
+
     }
 
     public function readed(){
-        $readed_messages=DB::table('messages')->where('statue',1)->orderBy("created_at","desc")->paginate(6);
+        $readed_messages=DB::table('messages')->where('statue',1)->orderBy("created_at","desc")->paginate(8);
         return view('admin.messages.readed',compact("readed_messages"));
     }
 

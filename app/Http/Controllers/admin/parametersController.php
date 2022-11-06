@@ -98,6 +98,28 @@ class parametersController extends Controller
             "success" => "picture est bien modifier "
         ]);
     }
+
+    public function set_footerlogo(){
+        $picture=setting::find(1);
+        return view('admin.parameters.footerlogo',compact('picture'));
+    }
+
+    public function footerlogo(Request $request){
+        $parameter=setting::find(1);
+        if ($request->has('image')) {
+            $file = $request->image;
+            $image_name = time() . '_' . $file->getClientOriginalName();
+            $file->move(public_path('profile'),$image_name);
+            // unlink(public_path('profile') . '/' . $parameter->footer_logo);
+        }
+        $parameter->update([
+            'footer_logo' => $image_name
+        ]);
+        return redirect()->route('admin.home')->with([
+            "success" => "footer logo est bien modifier "
+        ]);
+    }
+
     public function set_cv(){
         $cv=setting::find(1);
         return view('admin.parameters.cv',compact('cv'));

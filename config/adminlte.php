@@ -330,6 +330,11 @@ return [
                     'icon'    => 'fas fa-fw fa-list',
                 ],
                 [
+                    'text' => 'footer logo',
+                    'url'  => 'admin\update_footerlogo',
+                    'icon'    => 'fas fa-fw fa-list',
+                ],
+                [
                     'text' => 'role',
                     'url'  => 'admin/update_role',
                     'icon'    => 'fas fa-fw fa-list',

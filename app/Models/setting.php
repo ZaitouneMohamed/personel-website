@@ -8,9 +8,10 @@ use Illuminate\Database\Eloquent\Model;
 class setting extends Model
 {
     use HasFactory;
-    
+
     protected $fillable = [
         'nav_logo',
+        'footer_logo',
         'role',
         'cv',
         'picture',

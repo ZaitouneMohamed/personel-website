@@ -36,6 +36,11 @@ class servicesControlller extends Controller
      */
     public function store(Request $request)
     {
+        $request->validate([
+            "name" => "required",
+            "description" => "required",
+            "icon" => "required",
+        ]);
         service::create([
             "name" => $request->name,
             "description" => $request->description,
@@ -79,6 +84,11 @@ class servicesControlller extends Controller
     public function update(Request $request, $id)
     {
         $service=service::find($id);
+        $request->validate([
+            "name" => "required",
+            "description" => "required",
+            "icon" => "required",
+        ]);
         $service->update([
             "name" => $request->name,
             "description" => $request->description,

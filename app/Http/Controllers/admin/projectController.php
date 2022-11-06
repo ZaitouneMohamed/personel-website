@@ -37,6 +37,13 @@ class projectController extends Controller
      */
     public function store(Request $request)
     {
+        $request->validate([
+            "name" => "required",
+            "picture" => "required",
+            "description" => "required",
+            "technologies" => "required",
+            "link" => "required",
+        ]);
         if ($request->has('picture')) {
             $file = $request->picture;
             $picture_name = time() . '_' . $file->getClientOriginalName();
@@ -87,6 +94,13 @@ class projectController extends Controller
     public function update(Request $request, $id)
     {
         $project=project::find($id);
+        $request->validate([
+            "name" => "required",
+            "picture" => "required",
+            "description" => "required",
+            "technologies" => "required",
+            "link" => "required",
+        ]);
         if($request->has("picture")){
             $picture = $request->picture;
             $picture_name = time() . '_' . $picture->getClientOriginalName();

@@ -26,7 +26,7 @@ Route::resource('message', messagesController::class);
 
 Auth::routes();
 
-Route::get('/', [HomeController::class, 'index'])->name('home');
+Route::get('/', [HomeController::class, 'index']);
 
 Route::prefix('admin')->middleware(['IsAdmin'])->group(function(){
     Route::get('/', function () {
@@ -48,6 +48,9 @@ Route::prefix('admin')->middleware(['IsAdmin'])->group(function(){
     // update navbar logo
     Route::get('update_navlogo',[parametersController::class,'set_navlogo'])->name('navlogo.set');
     Route::put('navlogo',[parametersController::class,'navlogo'])->name('navlogo.update');
+    // update footer logo
+    Route::get('update_footerlogo',[parametersController::class,'set_footerlogo'])->name('footerlogo.set');
+    Route::put('footerlogo',[parametersController::class,'footerlogo'])->name('footerlogo.update');
     // update cv
     Route::get('update_cv',[parametersController::class,'set_cv'])->name('cv.set');
     Route::put('cv',[parametersController::class,'cv'])->name('cv.update');

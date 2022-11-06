@@ -36,7 +36,10 @@ class skillsControlller extends Controller
      */
     public function store(Request $request)
     {
-        // dd($request->all());
+        $request->validate([
+            "name" => "required",
+            "prct" => "required",
+        ]);
         skill::create([
             "name" => $request->name,
             "type" => $request->type,
@@ -80,6 +83,10 @@ class skillsControlller extends Controller
     public function update(Request $request, $id)
     {
         $skill=skill::find($id);
+        $request->validate([
+            "name" => "required",
+            "prct" => "required",
+        ]);
         $skill->update([
             "name" => $request->name,
             "type" => $request->type,

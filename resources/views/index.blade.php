@@ -77,7 +77,6 @@
                     </a>
                 </button>
                 <button class="aboutmebtn">
-                    {{-- <a download href="CV-Aminehariri.pdf"> --}}
                     <a target="blank" href="profile/{{$parametre->cv}}">
                         <i class="fa-solid fa-file"></i>
                         download cv
@@ -192,7 +191,7 @@
     <h2 class="section-title" data-heading="My abilities">My PROJECTS</h2>
         <div class="container">
             <div class="projects">
-                @foreach ($projects as $project)       
+                @foreach ($projects as $project)
                     <div class="project ms-service ">
                         <img src="/projects/{{$project->picture}}" class="p-img"  alt="">
                         <h3>{{$project->name}}</h3>
@@ -247,7 +246,7 @@
     <div class="container">
         <h2 class="section-title" data-heading="My services">what can i do </h2>
         <div class="boxes">
-            @foreach ($services as $service)    
+            @foreach ($services as $service)
                 <div class="box">
                     <i class="{{$service->icon}}"></i>
                     {{--  --}}
@@ -294,13 +293,11 @@
                             <input type="text" name="phone" class="phone" required placeholder="Your number">
                         </div>
                     </div>
-                    <div class="row">
                         <div class="group">
                             <label>Email</label>
                             <input type="Email" id="email" name="email" class="email" required placeholder="Example@gmail.com">
                             <label class="emailvalid valide">Please enter a valide email</label>
                         </div>
-                    </div>
                     <label >Message</label>
                         <textarea placeholder="Your message" name="content" class="message" required rows="5"></textarea>
                         <label class="msgvalid valide">Please enter a valide email</label>
@@ -332,7 +329,7 @@
     <div class="container">
         <div class="cols">
             <div class="col">
-                <img src="IMAGES/LogoFooter.jpg" alt="">
+                <img src="profile/{{$parametre->footer_logo}}" alt="">
             </div>
             <div class="col">
                 <h2>Quick links</h2>
