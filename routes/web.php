@@ -28,11 +28,16 @@ Auth::routes();
 
 Route::get('/', [HomeController::class, 'index']);
 
+Route::get('/admin', function () {
+    return view('admin.home');
+})->name('admin.home');
+Route::resource('admin/settings', manageadminController::class);
+
 Route::prefix('admin')->middleware(['IsAdmin'])->group(function(){
-    Route::get('/', function () {
-        return view('admin.home');
-    })->name('admin.home');
-    Route::resource('/settings', manageadminController::class);
+    // Route::get('/', function () {
+    //     return view('admin.home');
+    // })->name('admin.home');
+    // Route::resource('/settings', manageadminController::class);
     // update role
     Route::get('update_role',[parametersController::class,'set_role'])->name('role.set');
     Route::put('role',[parametersController::class,'role'])->name('role.update');
