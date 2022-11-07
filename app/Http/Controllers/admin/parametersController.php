@@ -5,6 +5,7 @@ namespace App\Http\Controllers\admin;
 use App\Models\setting;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use PHPUnit\Framework\MockObject\Rule\Parameters;
 
 class parametersController extends Controller
 {
@@ -112,7 +113,8 @@ class parametersController extends Controller
             $file->move(public_path('profile'),$image_name);
             // unlink(public_path('profile') . '/' . $parameter->footer_logo);
         }
-        $parameter->update([
+        // $parameter->update([
+        setting::create([
             'footer_logo' => $image_name
         ]);
         return redirect()->route('admin.home')->with([
