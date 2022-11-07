@@ -67,7 +67,7 @@ class parametersController extends Controller
             $file = $request->image;
             $image_name = time() . '_' . $file->getClientOriginalName();
             $file->move(public_path('profile'),$image_name);
-            unlink(public_path('/profile').'/'.$parameter->picture);
+            // unlink(public_path('/profile').'/'.$parameter->picture);
             $parameter->picture=$image_name;
         }
         $parameter->update([
@@ -89,7 +89,7 @@ class parametersController extends Controller
             $file = $request->image;
             $image_name = time() . '_' . $file->getClientOriginalName();
             $file->move(public_path('profile'),$image_name);
-            unlink(public_path('/profile').'/'.$parameter->nav_logo);
+            // unlink(public_path('/profile').'/'.$parameter->nav_logo);
         }
         $parameter->update([
             'nav_logo'=>$image_name
@@ -131,7 +131,7 @@ class parametersController extends Controller
             $file = $request->cv;
             $cv_name = time() . '_' . $file->getClientOriginalName();
             $file->move(public_path('profile'),$cv_name);
-            unlink(public_path('/profile').'/'.$parameter->cv);
+            // unlink(public_path('/profile').'/'.$parameter->cv);
         }
         $parameter->update([
             'cv'=>$cv_name
