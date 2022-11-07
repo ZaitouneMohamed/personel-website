@@ -324,16 +324,16 @@ return [
             'text'    => 'parameters',
             'icon'    => 'fas fa-fw fa-arrow-alt-circle-right',
             'submenu' => [
-                [
-                    'text' => 'nav bar logo',
-                    'url'  => 'admin\update_navlogo',
-                    'icon'    => 'fas fa-fw fa-list',
-                ],
-                [
-                    'text' => 'footer logo',
-                    'url'  => 'admin\update_footerlogo',
-                    'icon'    => 'fas fa-fw fa-list',
-                ],
+                // [
+                //     'text' => 'nav bar logo',
+                //     'url'  => 'admin\update_navlogo',
+                //     'icon'    => 'fas fa-fw fa-list',
+                // ],
+                // [
+                //     'text' => 'footer logo',
+                //     'url'  => 'admin\update_footerlogo',
+                //     'icon'    => 'fas fa-fw fa-list',
+                // ],
                 [
                     'text' => 'role',
                     'url'  => 'admin/update_role',
@@ -349,11 +349,11 @@ return [
                     'url'  => 'admin\update_about',
                     'icon'    => 'fas fa-fw fa-list',
                 ],
-                [
-                    'text' => 'picture',
-                    'url'  => 'admin\update_picture',
-                    'icon'    => 'fas fa-fw fa-list',
-                ],
+                // [
+                //     'text' => 'picture',
+                //     'url'  => 'admin\update_picture',
+                //     'icon'    => 'fas fa-fw fa-list',
+                // ],
                 [
                     'text' => 'cv',
                     'url'  => 'admin\update_cv',
