@@ -111,10 +111,9 @@ class parametersController extends Controller
             $file = $request->image;
             $image_name = time() . '_' . $file->getClientOriginalName();
             $file->move(public_path('profile'),$image_name);
-            // unlink(public_path('profile') . '/' . $parameter->footer_logo);
+            unlink(public_path('profile') . '/' . $parameter->footer_logo);
         }
-        // $parameter->update([
-        setting::create([
+        $parameter->update([
             'footer_logo' => $image_name
         ]);
         return redirect()->route('admin.home')->with([
