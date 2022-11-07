@@ -60,6 +60,7 @@ a{
     justify-content: space-between;
     align-items: center;
 }
+
 .nav-menu{
     z-index: 1;
 }
@@ -837,7 +838,7 @@ form label{
     margin:0  0 20px 0;
 }
 .footer .cols img{
-    height: 70px;
+    height: 200px;
 }
 .footer .cols ul li a{
     color: white;
