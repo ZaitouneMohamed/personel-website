@@ -18,7 +18,6 @@ return new class extends Migration
             $table->string('name',111);
             $table->string('phone',111);
             $table->string('email',111);
-            $table->string('object',1111);
             $table->string('content',1111);
             $table->string('statue',11);
             $table->timestamps();

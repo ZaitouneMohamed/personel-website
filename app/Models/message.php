@@ -13,7 +13,6 @@ class message extends Model
         'name',
         'phone',
         'email',
-        'object',
         'content',
         'statue',
     ];
