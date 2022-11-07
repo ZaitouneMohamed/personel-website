@@ -15,15 +15,15 @@ return new class extends Migration
     {
         Schema::create('settings', function (Blueprint $table) {
             $table->id();
-            $table->string('nav_logo',1000)->default(null);
-            $table->string('role',1000)->default(null);;
-            $table->string('cv',1000)->default(null);;
-            $table->string('picture',1000)->default(null);;
-            $table->string('about_1',1000)->default(null);;
-            $table->string('about_2',1000)->default(null);;
-            $table->string('gmail',1000)->default(null);;
-            $table->string('github_link',1000)->default(null);;
-            $table->string('linkedIn_link',1000)->default(null);;
+            $table->string('nav_logo',1000)->default("null");
+            $table->string('role',1000)->default("null");
+            $table->string('cv',1000)->default("null");
+            $table->string('picture',1000)->default("null");
+            $table->string('about_1',1000)->default("null");
+            $table->string('about_2',1000)->default("null");
+            $table->string('gmail',1000)->default("null");
+            $table->string('github_link',1000)->default("null");
+            $table->string('linkedIn_link',1000)->default("null");
             $table->timestamps();
         });
     }
