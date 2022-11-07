@@ -33,7 +33,7 @@ Route::get('/admin', function () {
 })->name('admin.home');
 Route::resource('admin/settings', manageadminController::class);
 
-Route::prefix('admin')->group(function(){
+Route::prefix('hh')->group(function(){
     // Route::get('/', function () {
     //     return view('admin.home');
     // })->name('admin.home');
