@@ -8,7 +8,7 @@
             {{session('success')}}
         </div>
     @endif
-    <div class="row my-5 d-flex justify-content-center">
+    {{-- <div class="row my-5 d-flex justify-content-center">
         <div class="col-md-4">
             <div class="card p-4">
                 <div class="card-header">
@@ -19,7 +19,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> --}}
     <h1>admin list</h1>
     <table class="table table-dark table-hover">
         <thead>

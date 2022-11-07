@@ -33,7 +33,7 @@ Route::get('/', [HomeController::class, 'index']);
 // })->name('admin.home');
 // Route::resource('admin/settings', manageadminController::class);
 
-Route::prefix('admin')->middleware(['IsAdmin'])->group(function(){
+Route::prefix('admin')->group(function(){
     Route::get('/', function () {
         return view('admin.home');
     })->name('admin.home');
