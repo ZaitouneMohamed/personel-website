@@ -12,7 +12,7 @@
             </ul>
         </div>
     @endif
-    <img src="/profile/{{$picture->footer_logo}}" alt="" width="100px" height="100px">
+    {{-- <img src="/profile/{{$picture->footer_logo}}" alt="" width="100px" height="100px"> --}}
     <h1>add new footer logo</h1> (the back-ground of logo should be '')
     <form method="POST" action="{{route('footerlogo.update')}}" enctype="multipart/form-data">
         @csrf

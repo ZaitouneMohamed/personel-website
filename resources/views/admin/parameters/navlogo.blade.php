@@ -12,7 +12,7 @@
             </ul>
         </div>
     @endif
-    <img src="/profile/{{$picture->nav_logo}}" alt="" width="100px" height="100px">
+    {{-- <img src="/profile/{{$picture->nav_logo}}" alt="" width="100px" height="100px"> --}}
     <h1>add new logo</h1>
     <form method="POST" action="{{route('navlogo.update')}}" enctype="multipart/form-data">
         @csrf

@@ -13,7 +13,7 @@
         </div>
     @endif
     <img src="/profile/{{$picture->picture}}" alt="" width="100px" height="100px">
-    <form method="POST" action="{{route('picture.update')}}" enctype="multipart/form-data">
+    {{-- <form method="POST" action="{{route('picture.update')}}" enctype="multipart/form-data"> --}}
         @csrf
         @method('put')
         <div class="mb-3">

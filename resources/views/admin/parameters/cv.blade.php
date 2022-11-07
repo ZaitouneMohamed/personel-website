@@ -12,7 +12,7 @@
             </ul>
         </div>
     @endif
-    here is your <a href="{{$cv->cv}}" target="blank">cv</a>
+    {{-- here is your <a href="{{$cv->cv}}" target="blank">cv</a> --}}
     <h1>add new cv</h1>
     <form method="POST" action="{{route('cv.update')}}" enctype="multipart/form-data">
         @csrf
