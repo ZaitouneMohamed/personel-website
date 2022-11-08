@@ -105,7 +105,7 @@ class projectController extends Controller
             $picture = $request->picture;
             $picture_name = time() . '_' . $picture->getClientOriginalName();
             $picture->move(public_path('projects'),$picture_name);
-            unlink(public_path('/projects'). '/' . $project->picture);
+            // unlink(public_path('/projects'). '/' . $project->picture);
         }
         $project->update([
             "name" => $request->name,
@@ -129,7 +129,7 @@ class projectController extends Controller
     {
         $project=project::find($id);
         $project->delete();
-        unlink(public_path('/projects'). '/' . $project->picture);
+        // unlink(public_path('/projects'). '/' . $project->picture);
         return redirect()->route('projects.index')->with([
             "success" => "project est bien supprimer"
         ]);
