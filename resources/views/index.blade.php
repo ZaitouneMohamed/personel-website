@@ -77,7 +77,7 @@
                     </a>
                 </button>
                 <button class="aboutmebtn">
-                    <a target="blank" href="profile/{{$parametre->cv}}">
+                    <a target="blank" href="zaitoune_mohamed_cv.pdf">
                         <i class="fa-solid fa-file"></i>
                         check my cv
                     </a>
