@@ -191,26 +191,60 @@
     <h2 class="section-title" data-heading="My abilities">My PROJECTS</h2>
         <div class="container">
             <div class="projects">
-                @foreach ($projects as $project)
                     <div class="project ms-service ">
-                        <img src="/projects/{{$project->picture}}" class="p-img"  alt="">
-                        <h3>{{$project->name}}</h3>
+                        <img src="/projects/restaurent.png" class="p-img"  alt="">
+                        <h3>delivery</h3>
                         <span class="work-button">more
                             <i class="fa-sharp fa-solid fa-arrow-right"></i>
                         </span>
                         <div class="popup-info">
                             <div class="portfolio-popup-body">
-                                <h3 class="details-title">{{$project->name}}</h3>
-                                <p class="details-description">{{$project->description}} </p>
+                                <h3 class="details-title">delivery</h3>
+                                <p class="details-description">delivery system , you can use it to make a order to any food you want </p>
                                 <ul class="detail-info">
-                                    <li>TEchnologies - <span>{{$project->technologies}}. </span></li>
+                                    <li>TEchnologies - <span>Html ,tailwind , bootstrap , JS , Laravel. </span></li>
                                     <li>Role - <span>Back-End</span></li>
-                                    <li>View - <span><a href="{{$project->link}}">{{$project->link}}</a></span></li>
+                                    <li>View - <span><a href="https://github.com/ZaitouneMohamed/delivery-website-laravel">link</a></span></li>
                                 </ul>
                             </div>
                         </div>
                     </div>
-                @endforeach
+                    <div class="project ms-service ">
+                        <img src="/projects/portfolio.png" class="p-img"  alt="">
+                        <h3>porfolio</h3>
+                        <span class="work-button">more
+                            <i class="fa-sharp fa-solid fa-arrow-right"></i>
+                        </span>
+                        <div class="popup-info">
+                            <div class="portfolio-popup-body">
+                                <h3 class="details-title">portfolio</h3>
+                                <p class="details-description">portfolio permet de présenter mes travaux</p>
+                                <ul class="detail-info">
+                                    <li>TEchnologies - <span>Html ,Css , JS , Laravel , My-Sql . </span></li>
+                                    <li>Role - <span>Back-End</span></li>
+                                    <li>View - <span><a href="zaitoune.herokuapp.com">zaitoune.herokuapp.com</a></span></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project ms-service ">
+                        <img src="/projects/restaurent.png" class="p-img"  alt="">
+                        <h3>restaurent</h3>
+                        <span class="work-button">more
+                            <i class="fa-sharp fa-solid fa-arrow-right"></i>
+                        </span>
+                        <div class="popup-info">
+                            <div class="portfolio-popup-body">
+                                <h3 class="details-title">restaurent</h3>
+                                <p class="details-description">the same idea as delivery project , but i use different technologies</p>
+                                <ul class="detail-info">
+                                    <li>TEchnologies - <span>Html ,Css , JS , bootstrap , PHP , My-Sql. </span></li>
+                                    <li>Role - <span>Back-End</span></li>
+                                    <li>View - <span><a href="https://github.com/ZaitouneMohamed/restaurent-website-php-">git hub link</a></span></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
             </div>
 
             <!-- pop up code -->
